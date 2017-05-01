@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link charset="UTF-8">
+		<meta name="Bill Hoang" content="template">
+    	<link rel="stylesheet" type="text/css" href="css/main.css">
+    	<link rel="stylesheet" type= "text/css" href="css/animate.css">
+    	<!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<title>calculator</title>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div id="calculator" class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+						<div class="row">
+							<input id="input" type="text" name="number" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
+						</div>
+						<!--LG VIEW -->
+						<div class="hidden-xs">
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-1 button-row">	
+									<div class="row flexer">
+										<button class="col-xs-2 col-sm-3 calButton">mrc</button>
+										<button class="col-xs-2 col-sm-3 calButton">m-</button>
+										<button class="col-xs-2 col-sm-3 calButton">m+</button>
+										<button class="col-xs-2 col-sm-3 calButton">/</button>
+									</div>
+								</div>
+							</div>	
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-1 button-row">	
+									<div class="row flexer">
+										<button class="col-xs-2 col-sm-3 calButton">9</button>
+										<button class="col-xs-2 col-sm-3 calButton">8</button>
+										<button class="col-xs-2 col-sm-3 calButton">7</button>
+										<button class="col-xs-2 col-sm-3 calButton">*</button>
+									</div>
+								</div>
+							</div>	
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-1 button-row">	
+									<div class="row flexer">
+										<button class="col-xs-2 col-sm-3 calButton">6</button>
+										<button class="col-xs-2 col-sm-3 calButton">5</button>
+										<button class="col-xs-2 col-sm-3 calButton">4</button>
+										<button class="col-xs-2 col-sm-3 calButton">-</button>
+									</div>
+								</div>
+							</div>	
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-1 button-row">	
+									<div class="row flexer">
+										<button class="col-xs-2 col-sm-3 calButton">3</button>
+										<button class="col-xs-2 col-sm-3 calButton">2</button>
+										<button class="col-xs-2 col-sm-3 calButton">1</button>
+										<button class="col-xs-2 col-sm-3 calButton">+</button>
+									</div>
+								</div>
+							</div>	
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-1 button-row">	
+									<div class="row flexer">
+										<button class="col-xs-2 col-sm-3 calButton">0</button>
+										<button class="col-xs-2 col-sm-3 calButton">.</button>
+										<button class="col-xs-2 col-sm-3 calButton">C</button>
+										<button class="col-xs-2 col-sm-3 calButton">=</button>
+									</div>
+								</div>
+							</div>
+						</div>	
+						
+						<!--XS VIEW -->
+						<div class="hidden-md hidden-sm hidden-lg">
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-2 button-row">	
+									<div class="row flexer">
+										<button class="col-xs-2 col-sm-3 calButton">mrc</button>
+										<button class="col-xs-2 col-sm-3 calButton">m-</button>
+										<button class="col-xs-2 col-sm-3 calButton">m+</button>
+										<button class="col-xs-2 col-sm-3 calButton">/</button>
+									</div>
+								</div>
+							</div>	
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-2 button-row">	
+									<div class="row flexer">
+										<button class="col-xs-2 col-sm-3 calButton">9</button>
+										<button class="col-xs-2 col-sm-3 calButton">8</button>
+										<button class="col-xs-2 col-sm-3 calButton">7</button>
+										<button class="col-xs-2 col-sm-3 calButton">*</button>
+									</div>
+								</div>
+							</div>	
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-2 button-row">	
+									<div class="row flexer">
+										<button class="col-xs-2 col-sm-3 calButton">6</button>
+										<button class="col-xs-2 col-sm-3 calButton">5</button>
+										<button class="col-xs-2 col-sm-3 calButton">4</button>
+										<button class="col-xs-2 col-sm-3 calButton">-</button>
+									</div>
+								</div>
+							</div>	
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-2 button-row">	
+									<div class="row flexer">
+										<button class="col-xs-2 col-sm-3 calButton">3</button>
+										<button class="col-xs-2 col-sm-3 calButton">2</button>
+										<button class="col-xs-2 col-sm-3 calButton">1</button>
+										<button class="col-xs-2 col-sm-3 calButton">+</button>
+									</div>
+								</div>
+							</div>	
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-2 button-row">	
+									<div class="row flexer">
+										<button class="col-xs-2 col-sm-3 calButton">0</button>
+										<button class="col-xs-2 col-sm-3 calButton">.</button>
+										<button class="col-xs-2 col-sm-3 calButton">C</button>
+										<button class="col-xs-2 col-sm-3 calButton">=</button>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+

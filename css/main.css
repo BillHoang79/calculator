@@ -1,0 +1,31 @@
+#calculator {
+	background-color: #3E4442;
+	padding: 15px;
+	border-radius: 5px;
+}
+
+#input {
+	margin-bottom: 10px;
+	height:50px;
+	background-color: #BCCD96;
+	border-color: #000000;
+	border-radius: 5px;
+}
+
+.calButton {
+	padding: 0;
+	height:40px;
+	align-items: stretch;
+    margin: 7px 3px;
+}
+
+.calButton1 {
+	padding: 0;
+	height:40px;
+	align-items: stretch;
+    margin: 7px 3px;
+}
+
+.flexer {
+	display: flex;
+}
