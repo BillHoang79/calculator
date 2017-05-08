@@ -4,7 +4,6 @@
 		<link charset="UTF-8">
 		<meta name="Bill Hoang" content="template">
     	<link rel="stylesheet" type="text/css" href="css/main.css">
-    	<link rel="stylesheet" type= "text/css" href="css/animate.css">
     	<!-- Latest compiled and minified CSS -->
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<!-- Optional theme -->
@@ -18,60 +17,57 @@
 				<div class="col-sm-6 col-sm-offset-3">
 					<div id="calculator" class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 						<div class="row">
-							<input id="input" type="text" name="number" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
+							<input id="input" readonly type="text" value="0" name="number" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
 						</div>
 						<!--LG VIEW -->
 						<div class="hidden-xs">
 							<div class="row">
 								<div class="col-xs-10 col-xs-offset-1 button-row">	
 									<div class="row flexer">
-										<button class="col-xs-2 col-sm-3 calButton">mrc</button>
-										<button class="col-xs-2 col-sm-3 calButton">m-</button>
-										<button class="col-xs-2 col-sm-3 calButton">m+</button>
-										<button class="col-xs-2 col-sm-3 calButton">/</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">9</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">8</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">7</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="division()">/</button>
 									</div>
 								</div>
 							</div>	
 							<div class="row">
 								<div class="col-xs-10 col-xs-offset-1 button-row">	
 									<div class="row flexer">
-										<button class="col-xs-2 col-sm-3 calButton">9</button>
-										<button class="col-xs-2 col-sm-3 calButton">8</button>
-										<button class="col-xs-2 col-sm-3 calButton">7</button>
-										<button class="col-xs-2 col-sm-3 calButton">*</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">6</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">5</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">4</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="multiplication()">*</button>
 									</div>
 								</div>
 							</div>	
 							<div class="row">
 								<div class="col-xs-10 col-xs-offset-1 button-row">	
 									<div class="row flexer">
-										<button class="col-xs-2 col-sm-3 calButton">6</button>
-										<button class="col-xs-2 col-sm-3 calButton">5</button>
-										<button class="col-xs-2 col-sm-3 calButton">4</button>
-										<button class="col-xs-2 col-sm-3 calButton">-</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">3</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">2</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">1</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="subtraction()">-</button>
 									</div>
 								</div>
 							</div>	
 							<div class="row">
 								<div class="col-xs-10 col-xs-offset-1 button-row">	
 									<div class="row flexer">
-										<button class="col-xs-2 col-sm-3 calButton">3</button>
-										<button class="col-xs-2 col-sm-3 calButton">2</button>
-										<button class="col-xs-2 col-sm-3 calButton">1</button>
-										<button class="col-xs-2 col-sm-3 calButton">+</button>
-									</div>
-								</div>
-							</div>	
-							<div class="row">
-								<div class="col-xs-10 col-xs-offset-1 button-row">	
-									<div class="row flexer">
-										<button class="col-xs-2 col-sm-3 calButton">0</button>
-										<button class="col-xs-2 col-sm-3 calButton">.</button>
-										<button class="col-xs-2 col-sm-3 calButton">C</button>
-										<button class="col-xs-2 col-sm-3 calButton">=</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">0</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">.</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="clearNumbers()">C</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="addition()">+</button>
 									</div>
 								</div>
 							</div>
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-1 button-row">	
+									<div class="row flexer">
+										<button id="space-bar" onclick="equals(this)" class="col-xs-12 calButton">=</button>
+									</div>
+								</div>
+							</div>	
 						</div>	
 						
 						<!--XS VIEW -->
@@ -79,53 +75,50 @@
 							<div class="row">
 								<div class="col-xs-10 col-xs-offset-2 button-row">	
 									<div class="row flexer">
-										<button class="col-xs-2 col-sm-3 calButton">mrc</button>
-										<button class="col-xs-2 col-sm-3 calButton">m-</button>
-										<button class="col-xs-2 col-sm-3 calButton">m+</button>
-										<button class="col-xs-2 col-sm-3 calButton">/</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">9</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">8</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">7</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="division()">/</button>
 									</div>
 								</div>
 							</div>	
 							<div class="row">
 								<div class="col-xs-10 col-xs-offset-2 button-row">	
 									<div class="row flexer">
-										<button class="col-xs-2 col-sm-3 calButton">9</button>
-										<button class="col-xs-2 col-sm-3 calButton">8</button>
-										<button class="col-xs-2 col-sm-3 calButton">7</button>
-										<button class="col-xs-2 col-sm-3 calButton">*</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">6</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">5</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">4</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="multiplication()">*</button>
 									</div>
 								</div>
 							</div>	
 							<div class="row">
 								<div class="col-xs-10 col-xs-offset-2 button-row">	
 									<div class="row flexer">
-										<button class="col-xs-2 col-sm-3 calButton">6</button>
-										<button class="col-xs-2 col-sm-3 calButton">5</button>
-										<button class="col-xs-2 col-sm-3 calButton">4</button>
-										<button class="col-xs-2 col-sm-3 calButton">-</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">3</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">2</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">1</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="subtraction()">-</button>
 									</div>
 								</div>
 							</div>	
 							<div class="row">
 								<div class="col-xs-10 col-xs-offset-2 button-row">	
 									<div class="row flexer">
-										<button class="col-xs-2 col-sm-3 calButton">3</button>
-										<button class="col-xs-2 col-sm-3 calButton">2</button>
-										<button class="col-xs-2 col-sm-3 calButton">1</button>
-										<button class="col-xs-2 col-sm-3 calButton">+</button>
-									</div>
-								</div>
-							</div>	
-							<div class="row">
-								<div class="col-xs-10 col-xs-offset-2 button-row">	
-									<div class="row flexer">
-										<button class="col-xs-2 col-sm-3 calButton">0</button>
-										<button class="col-xs-2 col-sm-3 calButton">.</button>
-										<button class="col-xs-2 col-sm-3 calButton">C</button>
-										<button class="col-xs-2 col-sm-3 calButton">=</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">0</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="number(this.innerHTML)">.</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="clearNumbers()">C</button>
+										<button class="col-xs-2 col-sm-3 calButton" onclick="addition()">+</button>
 									</div>
 								</div>
 							</div>
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-2 button-row">	
+									<div class="row flexer">
+										<button class="col-xs-9 calButton" onclick="equals()">=</button>
+									</div>
+								</div>
+							</div>	
 						</div>	
 					</div>
 				</div>
